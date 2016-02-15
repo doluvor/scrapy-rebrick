@@ -61,9 +61,9 @@ NEWSPIDER_MODULE = 'rebrick.spiders'
 
 # Configure item pipelines
 # See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
-#ITEM_PIPELINES = {
-#    'rebrick.pipelines.SomePipeline': 300,
-#}
+ITEM_PIPELINES = {
+    'rebrick.pipelines.RebrickPipeline': 500,
+}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See http://doc.scrapy.org/en/latest/topics/autothrottle.html
@@ -83,3 +83,14 @@ NEWSPIDER_MODULE = 'rebrick.spiders'
 #HTTPCACHE_DIR='httpcache'
 #HTTPCACHE_IGNORE_HTTP_CODES=[]
 #HTTPCACHE_STORAGE='scrapy.extensions.httpcache.FilesystemCacheStorage'
+
+DB_SERVER = 'MySQLdb'
+DB_CONNECT = {
+    'db': 'rebrick',
+    'user': 'root',
+    'passwd': '',
+    'host': '104.128.82.166'
+    #'port': '27477'
+    #'charset': 'utf8'
+    #'use_unicode': True
+}

@@ -8,7 +8,9 @@
 import scrapy
 
 
-class RebrickItem(scrapy.Item):
+class SetItem(scrapy.Item):
     # define the fields for your item here like:
-    # name = scrapy.Field()
-    pass
+    id = scrapy.Field()
+    name = scrapy.Field()
+    piece = scrapy.Field()
+    
