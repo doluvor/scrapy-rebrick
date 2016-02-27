@@ -89,8 +89,8 @@ DB_CONNECT = {
     'db': 'rebrick',
     'user': 'root',
     'passwd': '',
-    'host': '104.128.82.166'
-    #'port': '27477'
-    #'charset': 'utf8'
-    #'use_unicode': True
+    'host': '127.0.0.1',
+    'port': 3306,
+    'charset': 'utf8',
+    'use_unicode': True
 }

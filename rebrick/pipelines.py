@@ -19,12 +19,14 @@ class RebrickPipeline(object):
         db_server = settings.get('DB_SERVER')
         dbpool = adbapi.ConnectionPool(db_server, **dbargs)
         self.dbpool = dbpool
+        
 
     def __del__(self):
         self.dbpool.close()
 
     def process_item(self, item, spider):
         self.insert_data(item, self.insert_sql)
+        print('-- Inserted item')
         return item
 
     def insert_data(self, item, insert):
@@ -33,4 +35,9 @@ class RebrickPipeline(object):
         qm = u','.join([u'%s'] * len(keys))
         sql = insert % (fields, qm)
         data = [item[k] for k in keys]
+        print(sql)
+        print(data)
         return self.dbpool.runOperation(sql, data)
+
+    def _handle_error(self, failure, item, spider):
+        log.err(failure)
