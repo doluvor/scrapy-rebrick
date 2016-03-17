@@ -7,10 +7,8 @@
 
 import scrapy
 
-
 class SetItem(scrapy.Item):
     # define the fields for your item here like:
     set_id = scrapy.Field()
     set_name = scrapy.Field()
     set_pieces = scrapy.Field()
-    
