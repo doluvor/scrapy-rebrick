@@ -12,7 +12,7 @@ settings = get_project_settings()
 
 class RebrickPipeline(object):
 
-    insert_sql = """insert into rebrick_set (%s) values ( %s )"""
+    insert_sql = """insert into rebrick_sets (%s) values ( %s )"""
 
     def __init__(self):
         dbargs = settings.get('DB_CONNECT')

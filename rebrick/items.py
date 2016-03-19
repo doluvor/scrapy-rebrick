@@ -12,3 +12,13 @@ class SetItem(scrapy.Item):
     set_id = scrapy.Field()
     set_name = scrapy.Field()
     set_pieces = scrapy.Field()
+    set_year = scrapy.Field()
+    set_theme1 = scrapy.Field()
+    set_theme2 = scrapy.Field()
+    set_theme3 = scrapy.Field()
+    set_descr = scrapy.Field()
+    set_url = scrapy.Field()
+    set_img_tn = scrapy.Field()
+    set_img_small = scrapy.Field()
+    set_img_big = scrapy.Field() 
+
